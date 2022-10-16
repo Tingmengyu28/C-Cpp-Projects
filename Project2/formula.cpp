@@ -87,7 +87,7 @@ stack<string> getValue_bigNumber(stack<string> stk, char ch)
         else if (num1[0] != '-' && num2[0] == '-')
         {
             num2 = num2.substr(1);
-            res = getCountMinus(num1,num2);
+            res = getCountMinus(num1, num2);
             stk.push(res);
         }
         else
@@ -406,12 +406,18 @@ float specialFunctions(string str)
         if (str[i] >= '0' && str[i] <= '9')
             num = 10 * num + str[i] - '0';
     if (funcName == "sqrt")
-    {
         result = sqrt(num);
-    }
     else if (funcName == "log")
-    {
         result = sqrt(num);
-    }
+    else if (funcName == "abs")
+        result = abs(num);
+    else if (funcName == "cos")
+        result = cos(num);
+    else if (funcName == "sin")
+        result = sin(num);
+    else if (funcName == "exp")
+        result = exp(num);
+    else if (funcName == "tan")
+        result = tan(num);
     return result;
 }
