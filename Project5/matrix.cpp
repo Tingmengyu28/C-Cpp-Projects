@@ -436,7 +436,7 @@ Matrix<T> Matrix<T>::operator*(const Matrix<T> &mat)
                                 {
                                     c += *(pMat + (i + row_begin) * col + k + col_begin + ch * row * col) * *(mat.pMat + (k + mat.row_begin) * mat.col + j + mat.col_begin + ch * mat.row * mat.col);
                                 }
-                                *(new_mat.pMat + i * new_mat.col + j + ch * roi_row * roi_col) = c;
+                                *(new_mat.pMat + i * new_mat.col + j + ch * new_mat.roi_row * new_mat.roi_col) = c;
                             }
                     return new_mat;
                 }
